@@ -1,3 +1,19 @@
 # AgriDMap 
+Made in Django app.
 
-Codes
+create virtual environment:
+python -m venv venv
+
+Then activate that environment:
+venv\Scripts\activate
+
+Then install Django in that environment:
+pip install django
+
+Then create django project named mysite:
+django-admin startproject Agri
+
+
+
+Run project using command:
+python manage.py runserver
