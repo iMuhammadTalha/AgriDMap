@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri D Map</title>
+   <!-- ++++++++++++++++++++ boostrap cdn ++++++++++++++++++++++++ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    #cke_id_body {
+        width: inherit !important;
+    }
+    .htmleditor p {
+        font-weight: 900;
+        font-size: 20px;
+    }
+    .texteditor p label {
+        font-weight: 800;
+        font-size: 18px;
+    }
+    #htmldata {
+        font-weight: 600;
+    }
+</style>
+<body style="background-color: #ADD8E6;">
+    <!-- ----------------------Navbar start -------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="text-align: center;">
+        <a class="navbar-brand" href="#">Agri D Map</a>
+   </nav>
+    <!-- ---------------------------Navbar Ends---------------------------- -->
+  <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <p style="text-align: center; font-size:24px; color:#444444; font-variant:small-caps; font-weight:450; margin-bottom:0px; margin-top:12px; ">
+                Crop Disease Monitoring using AI Model </p>
+
+        </div>
+    </div>
+        <div class="row">
+            
+            <br>
+
+            <div class="col-sm-12">
+
+                <!-- <img src="{{ FileURL }}" alt="" width="300" height="200"> -->
+                
+                <!-- <p style="text-align: center; font-size:24px; color: black; ">
+                    The leave condition is {{ResultClass}}    
+                </p> -->
+
+                <div class="col-lg-12" style="text-align: center;">
+                    <div class="card">
+                        <div class="card-body">
+                            {% if ResultClass %}
+                            <div class="flot-container" >
+                                Result: {{ResultClass}}
+                            </div>
+                            {% endif %}
+
+                            <br>
+                            {% if ResultClass == "HEALTHY" %}
+                            <div class="flot-container" >
+                                Fertilize with the right fertilizer mixture and a balanced nutrient supply. Do not over-water the crop during the season. Do not touch healthy plants after touching infected plants. Maintain a high number of different varieties of plants around fields. If treating against an infestation, use specific products that do not affect beneficial insects. Remove diseased leaves, fruit or branches at the right time during the growing season. After the harvest, clean up plant debris from the field or orchard and burn them. In case of pests and diseases, always consider an integrated approach. with preventive measures together with biological treatments if available. As long as preventive measures are followed and care is taken to give plants and trees what they need, no chemical control should be needed!
+                            </div>
+                            {% endif %}
+
+                            {% if ResultClass == "RESISTANT" %}
+                            <div class="flot-container" >
+                                The severity of the disease depends on the susceptibility of the plant. In vulnerable varieties, the fungus produces tiny, yellow to orange (rusty) pustules that are arranged in rows forming narrow stripes parallel to the leaf veins. They eventually merge and can engulf the whole leaf, a feature that appears earlier in young plants. These pustules (0.5 to 1 mm in diameter) can sometimes also be found on stems and heads. At later stages of the disease, long, necrotic, light brown stripes or blotches are visible on leaves, often covered with rusty pustules. In severe infections, the growth of plants is seriously compromised and tissues are damaged. The reduced leaf area leads to lower productivity, fewer spikes per plant and fewer grains per spike. Overall, the disease can lead to severe crop losses.
+                            </div>
+                            {% endif %}
+
+                            {% if ResultClass == "SUSCEPTIBLE" %}
+                            <div class="flot-container" >
+                                The severity of the disease depends on the susceptibility of the plant. In vulnerable varieties, the fungus produces tiny, yellow to orange (rusty) pustules that are arranged in rows forming narrow stripes parallel to the leaf veins. They eventually merge and can engulf the whole leaf, a feature that appears earlier in young plants. These pustules (0.5 to 1 mm in diameter) can sometimes also be found on stems and heads. At later stages of the disease, long, necrotic, light brown stripes or blotches are visible on leaves, often covered with rusty pustules. In severe infections, the growth of plants is seriously compromised and tissues are damaged. The reduced leaf area leads to lower productivity, fewer spikes per plant and fewer grains per spike. Overall, the disease can lead to severe crop losses.
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+
+            <div class="col-lg-3"></div>
+			
+        </div>
+    </div>
+</body>
+</html>
+<!-- ++++++++++++++++++++ boostrap cdn ++++++++++++++++++++++++ -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
