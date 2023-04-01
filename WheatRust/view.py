@@ -51,6 +51,39 @@ def home(request):
     else:
         return render(request, "home.html")
 
+def homes(request):
+    if request.method == "POST":
+        model = torch.load('resnet_test_model_new.pt',map_location=torch.device('cpu'))
+        model.eval()
+
+        file = request.FILES["pic"]
+        file_name = default_storage.save(file.name, file)
+        file_url = default_storage.path(file_name)
+
+        image = image_loader(file_url)
+
+        # image = image_loader(test_image1) # Test File
+        predict = model(image)
+        # print(predict.shape)
+        # print(predict)
+        _,index = torch.max(predict,1)
+        pred = torch.max(predict.data,1)
+        values,indices = pred
+        print(indices)
+
+        if indices == 0:
+            result = "HEALTHY"
+        elif indices == 1:
+            result = "RESISTANT"
+        elif indices == 2:
+            result = "SUSCEPTIBLE"
+
+        print(result)
+
+        return render(request, "homes.html", {'ResultClass':result, 'FileURL': file_url})
+    else:
+        return render(request, "homes.html")
+
 def result(request):
 
     model = torch.load('resnet_test_model_new.pt',map_location=torch.device('cpu'))
