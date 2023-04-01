@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 	Header Styles 
 --------------------------------------------------------*/
 .top-header {
-  background: #004879;
+  background: #006400;
   color: white;
   padding: 10px 0;
 }
@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .top-header .right-header ul.social-icons li a:hover {
   background-color: white;
-  color: #004879;
+  color: #006400;
 }
 
 .main-header {
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
 }
 .main-header .menu ul li a.current {
-  background: #004879;
+  background: #006400;
   color: white;
 }
 
@@ -194,14 +194,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .responsive-menu .toggle-menu {
   font-size: 24px;
-  color: #004879;
+  color: #006400;
 }
 .responsive-menu .menu {
   display: none;
   position: absolute;
   top: 52px;
   width: 100%;
-  background-color: #004879;
+  background-color: #006400;
 }
 .responsive-menu .menu ul li {
   display: block;
@@ -244,7 +244,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 70px;
   height: 4px;
-  background: #004879;
+  background: #006400;
   margin: 0 auto;
 }
 
@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mainBtn {
-  background-color: #004879;
+  background-color: #006400;
   color: white;
   display: inline-block;
   text-transform: uppercase;
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 #services .service-item .service-header i {
-  color: #004879;
+  color: #006400;
   font-size: 24px;
   float: left;
   margin-right: 25px;
@@ -372,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-box-shadow: none;
   box-shadow: none;
   line-height: 30px;
-  background: #004879;
+  background: #006400;
   text-transform: uppercase;
 }
 #about .our-team {
@@ -439,11 +439,11 @@ h1, h2, h3, h4, h5, h6 {
 #about .our-team .team-member .inner-content h5 {
   font-size: 18px;
   font-weight: 600;
-  color: #004879;
+  color: #006400;
   margin-bottom: 10px;
 }
 #about .our-team .team-member .inner-content span {
-  color: #004879;
+  color: #006400;
   margin-bottom: 15px;
   display: block;
 }
@@ -500,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 #contact .contact-info span i {
-  color: #004879;
+  color: #006400;
   font-size: 16px;
   margin-right: 12px;
 }
@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------*/
 .site-footer {
   margin-top: 100px;
-  background-color: #004879;
+  background-color: #006400;
   color: white;
   padding: 25px 0;
 }
@@ -612,11 +612,11 @@ Header dropdown
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #004879; color: white !important;}
+.dropdown-content a:hover {background-color: #006400; color: white !important;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #004879; color: white;}
+.dropdown:hover .dropbtn {background-color: #006400; color: white;}
 
 
 /********************************
