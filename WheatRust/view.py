@@ -9,6 +9,9 @@ from torch.autograd import Variable
 
 test_image1 = "image12.png"
 
+def index(request):
+    return render(request, 'index.html')
+    
 def home(request):
     if request.method == "POST":
         model = torch.load('resnet_test_model_new.pt',map_location=torch.device('cpu'))
