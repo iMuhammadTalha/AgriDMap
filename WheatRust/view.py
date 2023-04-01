@@ -11,7 +11,13 @@ test_image1 = "image12.png"
 
 def index(request):
     return render(request, 'index.html')
-    
+
+def publications(request):
+    return render(request, 'publications.html')
+
+def team(request):
+    return render(request, 'team.html')
+
 def home(request):
     if request.method == "POST":
         model = torch.load('resnet_test_model_new.pt',map_location=torch.device('cpu'))
