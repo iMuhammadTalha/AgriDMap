@@ -102,6 +102,10 @@
 
                                 <li><a onclick="location.href='team'" href="index.html">Team</a></li>
                                 <li><a onclick="location.href='publications'" href="publications.html">Publications</a></li>
+                                <!-- <select onchange="switchLanguage(this.value)">
+                                    <option value="en">English</option>
+                                    <option value="ur">اردو</option>
+                                  </select> -->
                             </ul>
                         </div> <!-- /.menu -->
                     </div> <!-- /.col-md-8 -->
@@ -337,7 +341,19 @@
         window.onload = loadScript;
     </script>
 
-
+<script>
+    function switchLanguage(lang) {
+      if (lang === "en") {
+        document.documentElement.lang = "en"; // Set the language attribute to English
+        document.getElementById("englishContent").style.display = "block"; // Show English content
+        document.getElementById("urduContent").style.display = "none"; // Hide Urdu content
+      } else if (lang === "ur") {
+        document.documentElement.lang = "ur"; // Set the language attribute to Urdu
+        document.getElementById("englishContent").style.display = "none"; // Hide English content
+        document.getElementById("urduContent").style.display = "block"; // Show Urdu content
+      }
+    }
+  </script>
 
 </body>
 </html>
