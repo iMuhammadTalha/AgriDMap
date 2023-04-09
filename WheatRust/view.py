@@ -7,6 +7,8 @@ from PIL import Image
 from torchvision import datasets, models, transforms
 from torch.autograd import Variable
 
+from WheatRust import settings
+
 test_image1 = "image12.png"
 
 def index(request):
@@ -18,6 +20,7 @@ def publications(request):
 def team(request):
     return render(request, 'team.html')
 
+# @cache_control(max_age=3600)
 def home(request):
     if request.method == "POST":
         model = torch.load('resnet_test_model_new.pt',map_location=torch.device('cpu'))
@@ -47,7 +50,7 @@ def home(request):
 
         print(result)
 
-        return render(request, "home.html", {'ResultClass':result, 'FileURL': file_url})
+        return render(request, "home.html", {'ResultClass':result, 'FileName': file_name, 'MEDIA_URL': settings.MEDIA_URL})
     else:
         return render(request, "home.html")
 

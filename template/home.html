@@ -172,6 +172,12 @@
                             <h3>Result: {{ResultClass}}</h3>
                             <span></span>
                         </div> -->
+                            {% if FileName %}
+                                {% load static %}
+                                <img src="{{ MEDIA_URL }}{{ FileName }}" height="300px" width="fit-content" alt="Result">
+                                <br>
+
+                            {% endif %}
                         {% endif %}
 
                         <br>
