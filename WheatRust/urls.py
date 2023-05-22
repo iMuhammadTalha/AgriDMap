@@ -26,6 +26,7 @@ urlpatterns = [
     path('homes', view.homes, name="homes"),
     path('result/', view.result,name="result"),
     path('index', view.index, name='index'),
+    path('', view.index, name='index'),
     path('publications', view.publications, name='publications'),
     path('team', view.team, name='team'),
 ]
