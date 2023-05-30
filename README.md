@@ -20,4 +20,4 @@ python manage.py runserver
 
 Docker: 
 docker build -t agridmap .
-docker run -p 8000:8000 agridmap
+docker run -p 8008:8008 agridmap
