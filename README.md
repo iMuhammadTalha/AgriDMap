@@ -16,7 +16,7 @@ django-admin startproject Agri
 
 
 Run project using command:
-python manage.py runserver
+python manage.py runserver 8008
 
 Docker: 
 docker build -t agridmap .
